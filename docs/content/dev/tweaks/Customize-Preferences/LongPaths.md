@@ -1,27 +1,19 @@
 ---
-title: "Multiplane Overlay"
+title: "Enable Long Paths"
 description: ""
 ---
 
-```json {filename="config/tweaks.json",linenos=inline,linenostart=1463}
-  "WPFToggleMultiplaneOverlay": {
-    "Content": "Multiplane Overlay",
-    "Description": "Enable or disable the Multiplane Overlay, which can sometimes cause issues with graphics cards.",
+```json {filename="config/tweaks.json",linenos=inline,linenostart=1791}
+  "WPFToggleLongPaths": {
+    "Content": "Enable Long Paths",
+    "Description": "Enables support for file paths longer than 260 characters.",
     "category": "Customize Preferences",
     "panel": "2",
     "Type": "Toggle",
     "registry": [
       {
-        "Path": "HKLM:\\SOFTWARE\\Microsoft\\Windows\\Dwm",
-        "Name": "OverlayTestMode",
-        "Value": "0",
-        "Type": "DWord",
-        "OriginalValue": "5",
-        "DefaultState": "true"
-      },
-      {
-        "Path": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\GraphicsDrivers",
-        "Name": "DisableOverlays",
+        "Path": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\FileSystem",
+        "Name": "LongPathsEnabled",
         "Value": "1",
         "Type": "DWord",
         "OriginalValue": "0",
